@@ -20,7 +20,7 @@ import {ENGINE} from './engine';
 import * as tf from './index';
 import {KernelFunc} from './index';
 import {ALL_ENVS, describeWithFlags, TestKernelBackend} from './jasmine_util';
-import {TensorInfo} from './kernel_registry';
+import { TensorInfo } from './tensor_info';
 import {Tensor} from './tensor';
 import {expectArraysClose} from './test_util';
 import {BackendValues, DataType} from './types';
@@ -243,7 +243,7 @@ describe('Backend registration', () => {
          throw new Error('failed to create async2');
        }, 101 /* priority */);
 
-       // Await for the library to find the best backend that succesfully
+       // Await for the library to find the best backend that successfully
        // initializes.
        await tf.ready();
        expect(tf.backend()).toEqual(testBackend);

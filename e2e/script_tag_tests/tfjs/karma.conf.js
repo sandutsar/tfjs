@@ -35,7 +35,7 @@ module.exports = function(config) {
   };
 
   const browserstackConfig =
-      {...devConfig, hostname: 'bs-local.com', singleRun: true, port: 9811};
+      {...devConfig, hostname: 'bs-local.com', singleRun: true, port: 9200};
 
   if (config.grep) {
     args.push('--grep', config.grep);
@@ -87,20 +87,20 @@ module.exports = function(config) {
         browser: 'safari',
         browser_version: 'latest',
         os: 'OS X',
-        os_version: 'High Sierra'
+        os_version: 'Mojave'
       },
       bs_ios_12: {
         base: 'BrowserStack',
         device: 'iPhone X',
         os: 'iOS',
-        os_version: '11.0',
+        os_version: '12.3',
         real_mobile: true
       },
-      bs_android_9: {
+      bs_android_10: {
         base: 'BrowserStack',
-        device: 'Google Pixel 3 XL',
+        device: 'Google Pixel 4 XL',
         os: 'android',
-        os_version: '9.0',
+        os_version: '10.0',
         real_mobile: true
       },
       win_10_chrome: {
